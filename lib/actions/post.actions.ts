@@ -12,13 +12,6 @@ interface createPostParams {
 	path: string;
 }
 
-interface createCommentParams {
-	postId: string;
-	commentText: string;
-	userId: string;
-	path: string;
-}
-
 export async function createPost({ text, author, communityId, path }: createPostParams) {
 	connectToDatabase();
 
@@ -39,7 +32,7 @@ export async function createPost({ text, author, communityId, path }: createPost
 	}
 }
 
-export async function fetchPosts(pageNumber: 1, pageSize: 20) {
+export async function fetchPosts(pageNumber: 1, pageSize: 30) {
 	connectToDatabase();
 
 	try {
