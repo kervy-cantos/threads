@@ -31,7 +31,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
 			<div className="mt-9">
 				<Tabs defaultValue="threads" className="w-full">
 					<TabsList className="tab">
-						{profileTabs.map((tab) => (
+						{profileTabs.map((tab: any) => (
 							<TabsTrigger>
 								<Image
 									src={tab.icon}
@@ -50,7 +50,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
 						))}
 
 					</TabsList>
-					{profileTabs.map((tab) => (
+					{profileTabs.map((tab: any) => (
 						<TabsContent key={`content-${tab.label}`} value={tab.value} className="w-full text-light-1">
 							<PostsTab
 								currentUserId={user.id}
